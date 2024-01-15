@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Anton';
+    src: url('../../assets/fonts/Anton-Regular.ttf') format('truetype');
+}
+
+.navCompleto {
+    display:flex;
+    background-color: #B4B4B3;
+    white-space: nowrap;
+}
+
+.logoYNombre {
+    display: flex;
+    align-items: center;
+    color: #E55604;
+}
+
+.imagenLogo {
+    margin: 1%;
+    width: 15%;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+}
+
+.secciones {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-family: "Anton";
+}
+
+a {
+    color: #EBE4D1;
+    font-size: 3vh;
+    text-decoration: none;
+    display: flex;
+    margin: 10px;
+}
+
+a:hover {
+    color: #E55604;
+}
+
+@media screen and (max-width: 900px) {
+    .navCompleto {
+        flex-direction: column;
+    }
+    
+    .logoYNombre {
+        flex-direction: column;
+    }
+    
+    img {
+        width: 150px;
+    }
+
+    .secciones {
+        width: auto;
+        align-self: center;
+    }
+  }
+
+@media screen and (max-width: 540px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .secciones {
+        flex-direction: column;
+        
+    }   
+
+    a:hover {
+        color: #EBE4D1;
+    }
+
+    a:active {
+        color: #E55604;
+    }
+  }

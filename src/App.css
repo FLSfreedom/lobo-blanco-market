@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: Anton;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: Anton;
+  font-size: 35px;
+}
+
+h3 {
+  font-family: Anton;
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+}

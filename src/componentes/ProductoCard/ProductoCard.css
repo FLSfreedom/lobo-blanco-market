@@ -1,0 +1,20 @@
+.divGrandeProductoCard {
+    background-color: #B4B4B3;
+    color: #26577C;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+    width: 230px;
+    height: 270px;
+    align-items: center;
+    justify-content: end;
+    margin: 10px;
+}
+
+.imagenProducto {
+    width: 70%;
+    height: 75%;
+    border-radius: 8px;
+}
