@@ -1,0 +1,16 @@
+.formularioCompleto {
+    display: flex;
+}
+
+.formularioSolo {
+    width: 50%;
+    background-color: white;
+}
+
+.divVideoTuCompra {
+    display: flex;
+    width: 50%;
+    height: auto;
+    position: inherit;
+    object-fit: cover;
+}

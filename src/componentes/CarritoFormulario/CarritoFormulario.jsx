@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { addDoc, collection, doc, getFirestore } from "firebase/firestore";
 import { useCarritoContext } from "../../Context/CarritoContext";
+import './CarritoFormulario.css'
 
 const CarritoFormulario = () => {
     const { ProductosListaCarrito, limpiar, precioTotal } = useCarritoContext();
@@ -55,54 +56,59 @@ const CarritoFormulario = () => {
     };
 
     return (
-        <center>
-            <div>
-                <h5>Ingresar datos del comprador</h5>
+        <center className='formularioCompleto'>
+            <div className='formularioSolo'>
+                <div>
+                    <h5>Ingresar datos del comprador</h5>
+                </div>
+                <form onSubmit={insertarOrden} style={{ width: '85%' }}>
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre y apellido"
+                        onChange={handleOnChange}
+                        value={datosFormulario.nombre}
+                    />
+                    <br />
+                    <input
+                        type="tel"
+                        name="telefono"
+                        placeholder="Teléfono"
+                        onChange={handleOnChange}
+                        value={datosFormulario.telefono}
+                    />
+                    <br />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="E-mail"
+                        onChange={handleOnChange}
+                        value={datosFormulario.email}
+                    />
+                    <br />
+                    <input
+                        type="email"
+                        name="confirmarEmail"
+                        placeholder="Confirmar e-mail"
+                        onChange={handleOnChange}
+                        value={datosFormulario.confirmarEmail}
+                    />
+                    <br />
+                    <button type="submit">¡Comprar!</button>
+                </form>
+                <div>
+                    <button onClick={limpiar}>Vaciar</button>
+                </div>
+                <div style={{
+                    margin: '2%',
+                    color: '#007ee5'
+                }}>
+                    {idDeOrden !== '' && <h5>Código de orden de compra: {idDeOrden}</h5>}
+                </div>
             </div>
-            <form onSubmit={insertarOrden} style={{ width: '85%' }}>
-                <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Nombre y apellido"
-                    onChange={handleOnChange}
-                    value={datosFormulario.nombre}
-                />
-                <br />
-                <input
-                    type="tel"
-                    name="telefono"
-                    placeholder="Teléfono"
-                    onChange={handleOnChange}
-                    value={datosFormulario.telefono}
-                />
-                <br />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                    onChange={handleOnChange}
-                    value={datosFormulario.email}
-                />
-                <br />
-                <input
-                    type="email"
-                    name="confirmarEmail"
-                    placeholder="Confirmar e-mail"
-                    onChange={handleOnChange}
-                    value={datosFormulario.confirmarEmail}
-                />
-                <br />
-                <button type="submit">¡Comprar!</button>
-            </form>
-            <div>
-                <button onClick={limpiar}>Vaciar</button>
-            </div>
-            <div style={{
-                margin: '2%',
-                color: '#007ee5'
-            }}>
-                {idDeOrden !== '' && <h5>Código de orden de compra: {idDeOrden}</h5>}
-            </div>
+            <video playsInline autoPlay muted loop className='divVideoTuCompra'>
+                <source src="./shopping.mp4" type="video/mp4"></source>
+            </video>        
         </center>
     );
 };

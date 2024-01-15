@@ -21,3 +21,14 @@ h3 {
 p {
   font-size: 30px;
 }
+
+button {
+  border-radius: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+}
+
+button:active {
+  box-shadow: none;
+}

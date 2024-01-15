@@ -14,7 +14,40 @@
 }
 
 .imagenProducto {
-    width: 70%;
-    height: 75%;
+    width: 64%;
+    height: 65%;
     border-radius: 8px;
+}
+
+.divAgregarYCantidad {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px
+}
+
+.botonesCard {
+    width: auto;
+    padding: 1%;
+    border: 3px solid #26577C;
+    font-size: 15px;
+    background-color: #26577C;
+    color: #EBE4D1;
+}
+
+.botonesCard:hover {
+    background-color: #EBE4D1;
+    color: #26577C;
+    cursor: pointer;
+}
+
+.botonesIncDec {
+    width: 20px;
+}
+
+.spanCantidadConteo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #EBE4D1;
+    margin: 0px 5px;
 }

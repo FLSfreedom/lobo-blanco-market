@@ -15,32 +15,24 @@
 
 .botonCategoria {
     width: -webkit-fill-available;
-    border-radius: 30px;
     border: 3px solid #E55604;
-    font-family: cursive;
-    font-weight: bold;
     font-size: 20px;
     background-color: #E55604;
     color: #EBE4D1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
 }
 
 .botonCategoria:hover {
-    border-color: #EBE4D1;
-    color: #E55604;
+    color: #EBE4D1;
     cursor: pointer;
     background: linear-gradient(to right, #26577C, #B4B4B3, #B4B4B3, #26577C);
     background-size: 200% 100%;
     animation: AnimacionDelFondo 3s linear infinite;
 }
 
-.botonCategoria:active {
-    box-shadow: none;
-}
-
 .contenedorDeCardsYTitulo {
     display: flex;
     flex-direction: column;
+    color: #E55604;
 }
 
 .contenedorDeCards {

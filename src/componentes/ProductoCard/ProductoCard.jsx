@@ -6,9 +6,12 @@ const ProductoCard = ({ id, nombre, precio, moneda, imagen, stock }) => {
   const { agregarACarrito } = useCarritoContext();
   const [cantidad, setCantidad] = useState(1);
 
-  const handleCantidadChange = (event) => {
-    const nuevaCantidad = parseInt(event.target.value, 10) || 1;
-    setCantidad(Math.min(nuevaCantidad, stock));
+  const handleIncremento = () => {
+    setCantidad((cantidadAuxiliar) => Math.min(cantidadAuxiliar + 1, stock));
+  };
+
+  const handleDecremento = () => {
+    setCantidad((cantidadAuxiliar) => Math.max(cantidadAuxiliar - 1, 1));
   };
 
   const handleAgregarAlCarrito = () => {
@@ -26,14 +29,14 @@ const ProductoCard = ({ id, nombre, precio, moneda, imagen, stock }) => {
       <img className='imagenProducto' src={imagen} alt="imagen del producto" />
       <h4>{nombre}</h4>
       <h4>{moneda}{precio}</h4>
-      <input
-        type="number"
-        value={cantidad}
-        onChange={handleCantidadChange}
-        min="1"
-        max={stock}
-      />
-      <button onClick={handleAgregarAlCarrito}>Agregar al Carrito</button>
+      <div className='divAgregarYCantidad'>
+        <button onClick={handleAgregarAlCarrito} className='botonesCard'>Agregar al Carrito</button>
+        <div>
+          <button onClick={handleDecremento} className='botonesCard botonesIncDec'>-</button>
+          <span className='spanCantidadConteo'>{cantidad}</span>
+          <button onClick={handleIncremento} className='botonesCard botonesIncDec'>+</button>
+        </div>
+      </div>
     </div>
   );
 };
