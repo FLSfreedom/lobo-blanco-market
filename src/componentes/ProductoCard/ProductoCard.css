@@ -51,3 +51,16 @@
     color: #EBE4D1;
     margin: 0px 5px;
 }
+
+@media screen and (max-width: 753px) {
+    .botonesCard:hover {
+        background-color: #26577C;
+        color: #EBE4D1;
+    }
+
+    .botonesCard:active {
+        background-color: #EBE4D1;
+        color: #26577C;
+        cursor: pointer;
+    }
+}

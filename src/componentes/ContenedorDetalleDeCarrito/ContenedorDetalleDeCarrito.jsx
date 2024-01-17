@@ -21,7 +21,7 @@ const ContenedorDetalleDeCarrito = () => {
           )            
         }
         <center>
-          <h4>{precioTotal() !== 0 && `Precio total de compra: $ ${precioTotal()}`}</h4>
+          <h3>{precioTotal() !== 0 && `Precio total de compra: $ ${precioTotal()}`}</h3>
         </center>
     </div>
   )
