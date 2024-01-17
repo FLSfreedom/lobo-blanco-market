@@ -1,5 +1,6 @@
 .formularioCompleto {
     display: flex;
+    color: #26577C;
 }
 
 .formularioSolo {
@@ -13,4 +14,39 @@
     height: auto;
     position: inherit;
     object-fit: cover;
+}
+
+.botonesFormulario {
+    width: auto;
+    padding: 1%;
+    border: 3px solid #26577C;
+    font-size: 15px;
+    background-color: #26577C;
+    color: #EBE4D1;
+}
+
+.botonesFormulario:hover {
+    background-color: #EBE4D1;
+    color: #26577C;
+    cursor: pointer;
+}
+
+.codigoOrdenDeCompra {
+    margin: 3% 0%;
+    color: #E55604;
+}
+
+@media screen and (max-width: 753px) {
+    .formularioCompleto {
+        flex-direction: column;
+    }
+
+    .formularioSolo {
+        width: 100%;
+    }
+
+    .divVideoTuCompra {
+        width: 100%;
+    }
+
 }

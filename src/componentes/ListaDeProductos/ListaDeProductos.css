@@ -9,14 +9,15 @@
     flex-direction: column;
     width: 30%;
     align-items: center;
-    justify-content: space-evenly;
     padding: 2%;
+    margin-top: 23px;
 }
 
 .botonCategoria {
     width: -webkit-fill-available;
     border: 3px solid #E55604;
     font-size: 20px;
+    margin: 5% 0%;
     background-color: #E55604;
     color: #EBE4D1;
 }
@@ -55,6 +56,10 @@
     .contenedorDeCardsYCategorías {
         flex-direction: column;
         align-items: center;
+    }
+
+    .contenedorDeCategorias {
+        margin-top: auto;
     }
 
     .botonCategoria {

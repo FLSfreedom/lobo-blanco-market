@@ -59,7 +59,7 @@ const CarritoFormulario = () => {
         <center className='formularioCompleto'>
             <div className='formularioSolo'>
                 <div>
-                    <h5>Ingresar datos del comprador</h5>
+                    <h3>Ingresar datos del comprador</h3>
                 </div>
                 <form onSubmit={insertarOrden} style={{ width: '85%' }}>
                     <input
@@ -94,16 +94,13 @@ const CarritoFormulario = () => {
                         value={datosFormulario.confirmarEmail}
                     />
                     <br />
-                    <button type="submit">¡Comprar!</button>
+                    <button type="submit" className='botonesFormulario'>¡Comprar!</button>
                 </form>
                 <div>
-                    <button onClick={limpiar}>Vaciar</button>
+                    <button onClick={limpiar} className='botonesFormulario'>Vaciar</button>
                 </div>
-                <div style={{
-                    margin: '2%',
-                    color: '#007ee5'
-                }}>
-                    {idDeOrden !== '' && <h5>Código de orden de compra: {idDeOrden}</h5>}
+                <div className='codigoOrdenDeCompra'>
+                    {idDeOrden !== '' && <h3>Código de orden de compra: {idDeOrden}</h3>}
                 </div>
             </div>
             <video playsInline autoPlay muted loop className='divVideoTuCompra'>

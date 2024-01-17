@@ -7,15 +7,14 @@ const ContenedorDetalleDeCarrito = () => {
     <div>
         { ProductosListaCarrito.map(nuevoProducto => (
             <div key={nuevoProducto.id}>
-                <img src={nuevoProducto.imagen} style={{width: 150, marginLeft: 10, marginTop: 10}}/>
-                <div style={{display: 'inline-block', marginLeft: 10, marginRight: 10}}>
-                   <div style={{display: 'inline-block', fontWeight: 'bold'}}>{nuevoProducto.nombre}</div>
-                    - Cantidad: {nuevoProducto.cantidad} - Precio: {nuevoProducto.precio * nuevoProducto.cantidad} {nuevoProducto.moneda}
-                </div>
+                <img src={nuevoProducto.imagen}/>
+                <p>
+                  {nuevoProducto.nombre} - 
+                  Cantidad: {nuevoProducto.cantidad} - 
+                  Precio: {nuevoProducto.precio * nuevoProducto.cantidad} {nuevoProducto.moneda}
+                </p>
                 <div>
-                  <button onClick={()=> borrarProducto(nuevoProducto.id)} style={{
-                    margin: '1%'
-                  }}> Eliminar producto</button>
+                  <button onClick={()=> borrarProducto(nuevoProducto.id)}> Eliminar producto</button>
                 </div>             
             </div>
             )

@@ -32,3 +32,28 @@ button {
 button:active {
   box-shadow: none;
 }
+
+input {
+  border-radius: 5px;
+  padding: 2%;
+}
+
+@media screen and (max-width: 540px) {
+  h1 {
+      font-size: 35px;
+  }
+
+  h2 {
+    font-family: Anton;
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-family: Anton;
+    font-size: 25px;
+  }
+  
+  p {
+    font-size: 25px;
+  }
+}
