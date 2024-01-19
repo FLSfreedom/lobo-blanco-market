@@ -5,7 +5,7 @@ import './TuCompra.css'
 const TuCompra = () => {
   return (
     <div id='TuCompraId'>
-      <h2>Tu Compra</h2>
+      <h2 className='tituloTuCompra'>Tu Compra</h2>
       <ContenedorDetalleDeCarrito/>
       <CarritoFormulario/>
     </div>

@@ -18,7 +18,13 @@ h3 {
   font-size: 30px;
 }
 
+h4 {
+  font-family: Anton;
+  font-size: 25px;
+}
+
 p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 30px;
 }
 
@@ -51,6 +57,11 @@ input {
   h3 {
     font-family: Anton;
     font-size: 25px;
+  }
+
+  h4 {
+    font-family: Anton;
+    font-size: 20px;
   }
   
   p {

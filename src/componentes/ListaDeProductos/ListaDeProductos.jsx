@@ -35,7 +35,7 @@ const ListaDeProductos = () => {
       </div>
       {categoriaSeleccionada && (
         <div className='contenedorDeCardsYTitulo'>
-          <h3>{categoriaSeleccionada.replace("_", " ").replace("_", " ")}</h3>
+          <h3 className='categoriaSeleccionadaEstilo'>{categoriaSeleccionada.replace("_", " ").replace("_", " ")}</h3>
           <div className='contenedorDeCards'>
             {productos.map((producto) => (
               <ProductoCard
